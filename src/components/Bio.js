@@ -16,8 +16,8 @@ const Bio = () => {
                 </p>
                 <br></br>
                 <p>
-                    I am proud to have worked at a start-up as a <span className='text-thirdColor'>UX designer</span> and <span className='text-thirdColor'>project manager intern </span>
-                    and had the privilege to run my own start up <span className='text-thirdColor'>Money Moves </span>
+                    I am proud to have worked as a <span className='text-thirdColor'>UX designer</span> and <span className='text-thirdColor'>project manager intern </span>
+                    and had the privilege to run my own start-up <span className='text-thirdColor'>Money Moves </span>
                     which was part of <a className='underline hover:text-fourthColor' href='https://nus.edu.sg/grip/news/nus-grip-run-6-lift-off-day/'> NUS Graduate Research Innovation Program run 6.</a>
                 </p>
             </div>

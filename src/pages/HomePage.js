@@ -11,12 +11,14 @@ const HomePage = () => {
             <Header />
             <Bio />
             <section className='flex justify-center pt-16'>
-                <button className='px-2 pl-3 py-2 text-[#000000] font-medium rounded-md bg-fourthColor hover:bg-[#957502]'>
+                <button 
+                    className='px-2 pl-3 py-2 text-[#000000] font-medium rounded-md bg-fourthColor hover:bg-[#957502]'                    
+                >
+                    
                     <div className='flex'>
                         <p>Projects</p>
-                        <span className='pt-[5px]'><MdOutlineNavigateNext /></span>
-                    </div>
-                    
+                        <span className='pt-[5px]'><MdOutlineNavigateNext/> </span>
+                    </div>                    
                 </button>
             </section>
             <Work />
