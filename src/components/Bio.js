@@ -5,7 +5,7 @@ const Bio = () => {
     return (
         <section className='pt-20 md:pt-24'>
             <div className='flex'>
-                <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor'>Bio</h1>
+                <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>Bio</h1>
             </div>
 
             <div className='pt-5 text-md max-w-7xl'>

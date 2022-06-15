@@ -16,7 +16,7 @@ const Work = () => {
     return (
         <section className="pt-20 mb-20 md:pt-24">
             <div className='flex'>
-                <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor'>Work</h1>
+                <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>Experience</h1>
             </div>
 
             <div className='flex flex-col md:flex-row pt-7'>
@@ -34,25 +34,25 @@ const Work = () => {
                     ))}
 
                 </div>
+                <div>
+                    <AnimatePresence exitBeforeEnter>
+                        <motion.div
+                            key={selectedTab && selectedTab.company}
+                            initial={{ y: 10, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: -10, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
+                        >
+                            {
+                                selectedTab &&
+                                <WorkCard selectedTab={selectedTab} />
+                            }
+
+
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
             </div>
-            <section>
-                <AnimatePresence exitBeforeEnter>
-                    <motion.div
-                        key={selectedTab && selectedTab.company}
-                        initial={{ y: 10, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: -10, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                    >
-                        {
-                            selectedTab &&
-                            <WorkCard selectedTab={selectedTab} />
-                        }
-
-
-                    </motion.div>
-                </AnimatePresence>
-            </section>
         </section>
     )
 }
