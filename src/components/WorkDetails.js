@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdNavigateNext } from 'react-icons/md';
 
-const WorkResp = ({ text }) => {
+const WorkDetails = ({ text }) => {
     return (
         <div className='flex'>
             <span className='pt-[3px]'><MdNavigateNext color={'339F78'} /></span>
@@ -10,4 +10,4 @@ const WorkResp = ({ text }) => {
     )
 }
 
-export default WorkResp
+export default WorkDetails;

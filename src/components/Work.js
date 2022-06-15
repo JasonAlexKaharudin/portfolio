@@ -1,53 +1,58 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from "framer-motion";
 import WorkCard from './WorkCard';
 
+const allInfo = [
+    { company: 'MoneyMoves', role: 'Co-founder & CTO', dates: 'February 2021 - February 2022', res: ['Work with customer-facing API', 'Something to do with Widgets', 'Managed some dudes', 'These stuff on the web app with postgreSQL'] },
+    { company: 'Amili', role: 'UX Designer & PM Intern', dates: 'May 2021 - August 2021', res: ['Help improve Customer Dashboard', 'Debug Customer', 'Helped with V2 of customer dashboard', 'These stuff on the web app with postgreSQL'] }
+]
+
+const [mm, amili] = allInfo;
+const initTabs = [mm, amili];
+
 const Work = () => {
-    const [showMM, setShowMM] = useState(true);
-
-    const handleShowMM = () => {
-        if (showMM === false){
-            const MMBtn = document.getElementById('moneymoves');
-            const amiliBtn = document.getElementById('amili')
-            amiliBtn.classList.remove("bg-[#454545]");
-            MMBtn.classList.add("bg-[#454545]");
-            setShowMM(true);
-        }
-    }
-
-    const handleShowAmili = () => {
-        const MMBtn = document.getElementById('moneymoves');
-        const amiliBtn = document.getElementById('amili')
-        MMBtn.classList.remove("bg-[#454545]");
-        amiliBtn.classList.add("bg-[#454545]");
-        setShowMM(false);
-    }
+    const [selectedTab, setSelectedTab] = useState(initTabs[0]);
 
     return (
-        <section className='pt-20 mb-20 md:pt-24'>
+        <section className="pt-20 mb-20 md:pt-24">
             <div className='flex'>
                 <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor'>Work</h1>
             </div>
 
             <div className='flex flex-col md:flex-row pt-7'>
                 <div className='flex items-start font-medium md:justify-start md:flex-col text-secondaryTextColor'>
-                    <button
-                        id='moneymoves'
-                        className='font-bold bg-[#454545] rounded-md px-2 py-1 text-secondaryTextColor'
-                        onClick={handleShowMM}
-                    >
-                        MoneyMoves
-                    </button>
-                    <button
-                        id='amili'
-                        className='px-2 py-1 font-bold rounded-md text-secondaryTextColor'
-                        onClick={handleShowAmili}
-                    >
-                        Amili
-                    </button>
-                </div>
 
-                <WorkCard showMM={showMM}/>
+                    {initTabs.map((item) => (
+                        <button
+                            key={item.company}
+                            id={`${item.company}Btn`}
+                            className={item === selectedTab ? 'font-medium bg-[#454545] transition-all ease-in-out delay-75 duration-500 rounded-md px-2 py-1 text-secondaryTextColor' : 'font-medium transition-all ease-in-out delay-75 duration-500 rounded-md px-2 py-1 text-secondaryTextColor'}
+                            onClick={() => setSelectedTab(item)}>
+
+                            {`${item.company}`}
+                        </button>
+                    ))}
+
+                </div>
             </div>
+            <section>
+                <AnimatePresence exitBeforeEnter>
+                    <motion.div
+                        key={selectedTab && selectedTab.company}
+                        initial={{ y: 10, opacity: 0 }}
+                        animate={{ y: 0, opacity: 1 }}
+                        exit={{ y: -10, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                    >
+                        {
+                            selectedTab &&
+                            <WorkCard selectedTab={selectedTab} />
+                        }
+
+
+                    </motion.div>
+                </AnimatePresence>
+            </section>
         </section>
     )
 }

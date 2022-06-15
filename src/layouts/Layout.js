@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Navbar />
-            <main className='px-16 pb-24 md:px-24 bg-mainBG text-primaryTextColor'>
+            <main className='flex flex-col max-w-screen-md px-16 pb-24 m-auto bg-mainBG text-primaryTextColor'>
                 {children}
             </main>
         </>
