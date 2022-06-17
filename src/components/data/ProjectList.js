@@ -1,7 +1,7 @@
 import AApic from '../../assets/AApic.png'
 import MMpic from '../../assets/MMpic.png';
 import stfuPic from '../../assets/stfuPic.png';
-import WIPpics from '../../assets/WIPpics.png';
+import WIP from '../../assets/WIP.png';
 
 const mm = {
     name: 'Money Moves',
@@ -31,7 +31,7 @@ const stfu = {
 
 const workout = {
     name: 'Workout Tracker',
-    picture: WIPpics,
+    picture: WIP,
     alt: 'workoutTracker',
     link: '',
     github: 'https://github.com/JasonAlexKaharudin/workoutTracker',

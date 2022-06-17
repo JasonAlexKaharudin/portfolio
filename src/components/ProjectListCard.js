@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const ProjectCard = ({ project }) => {    
+const ProjectListCard = ({ project }) => {    
 
     return (
-        <div className='w-full py-3 md:w-5/12'>
+        <div className='w-full py-8 md:w-5/12'>
             <Link to={`/projects/${project.alt}`}>
                 <img src={project.picture} alt={project.alt} />
                 <div className='flex justify-center pt-3'>
@@ -29,4 +29,4 @@ const ProjectCard = ({ project }) => {
     )
 }
 
-export default ProjectCard;
+export default ProjectListCard;

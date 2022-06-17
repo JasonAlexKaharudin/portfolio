@@ -1,15 +1,15 @@
 import React from 'react';
 import { projectList } from './data/ProjectList';
-import ProjectCard from './ProjectCard';
+import ProjectListCard from './ProjectListCard';
 
-const Projects = () => {
+const ProjectList = () => {
     return (
         <section className='pb-20 md:pb-32'>
             <div className='flex flex-wrap justify-around pt-6'>                
                 {
                     projectList.map((project, idx) => {
                         return (
-                            <ProjectCard key={idx} project={project}/>
+                            <ProjectListCard key={idx} project={project}/>
                         )
                     })
                 }
@@ -18,4 +18,4 @@ const Projects = () => {
     )
 }
 
-export default Projects;
+export default ProjectList;
