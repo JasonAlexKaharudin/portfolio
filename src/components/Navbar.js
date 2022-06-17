@@ -1,6 +1,6 @@
 import React from 'react';
 import { RiMenu3Line } from 'react-icons/ri';
-// import { GrClose } from 'react-icons/gr';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -17,9 +17,9 @@ const Navbar = () => {
 
           <div className="hidden w-full md:block md:w-auto">
             <div className='absolute z-10 w-full pr-9 bg-[#202023] md:pr-0 md:z-0 md:static md:bg-none pb-10'>
-              <div className='flex flex-col items-center justify-between pt-3 md:flex-row md:pt-0'>
-                <p className='px-3 py-3'>Work</p>
-                <p className='px-3 py-3'>Projects</p>
+              <div className='flex flex-col items-center justify-between pt-3 md:flex-row md:pt-0'>                
+                <Link to='/' className='px-3 py-3'>Work</Link>
+                <Link to="/projects" className='px-3 py-3'>Projects</Link>                
                 <div className='pl-2 text-fourthColor font-VT323'>
                   <button className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'>
                     Resume

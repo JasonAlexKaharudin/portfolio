@@ -2,7 +2,6 @@ import React from 'react'
 import Header from '../components/Header';
 import Bio from '../components/Bio';
 import Work from '../components/Work';
-import FooterCard from '../components/FooterCard';
 import { MdOutlineNavigateNext } from 'react-icons/md';
 
 const HomePage = () => {
@@ -21,9 +20,8 @@ const HomePage = () => {
                     </div>                    
                 </button>
             </section>
-            <Work />
-
-            <FooterCard/>
+            
+            <Work />                        
         </>
     )
 }

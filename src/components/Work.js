@@ -14,13 +14,13 @@ const Work = () => {
     const [selectedTab, setSelectedTab] = useState(initTabs[0]);
 
     return (
-        <section className="pt-20 mb-20 md:pt-24">
+        <section className="pt-20 md:pt-24">
             <div className='flex'>
-                <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>Experience</h1>
+                <h1 id='work' className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>Work</h1>
             </div>
 
-            <div className='flex flex-col md:flex-row pt-7'>
-                <div className='flex items-start font-medium md:justify-start md:flex-col text-secondaryTextColor'>
+            <div className='flex flex-col pt-5 md:flex-row'>
+                <div className='flex items-start font-medium md:justify-start md:flex-col text-secondaryTextColor '>
 
                     {initTabs.map((item) => (
                         <button
@@ -34,7 +34,7 @@ const Work = () => {
                     ))}
 
                 </div>
-                <div>
+                <div className='md:pl-4'>
                     <AnimatePresence exitBeforeEnter>
                         <motion.div
                             key={selectedTab && selectedTab.company}
