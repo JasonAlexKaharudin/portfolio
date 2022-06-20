@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 import WorkCard from './WorkCard';
 
-const allInfo = [
+const WorkInfo = [
     { company: 'MoneyMoves', role: 'Co-founder & CTO', dates: 'February 2021 - February 2022', res: ['Work with customer-facing API', 'Something to do with Widgets', 'Managed some dudes', 'These stuff on the web app with postgreSQL'] },
     { company: 'Amili', role: 'UX Designer & PM Intern', dates: 'May 2021 - August 2021', res: ['Help improve Customer Dashboard', 'Debug Customer', 'Helped with V2 of customer dashboard', 'These stuff on the web app with postgreSQL'] }
 ]
 
-const [mm, amili] = allInfo;
+const [mm, amili] = WorkInfo;
 const initTabs = [mm, amili];
 
 const Work = () => {
