@@ -6,14 +6,14 @@ const ProjectItemHeader = ({ ProjectName, ProjectDates }) => {
     return (
         <div className='flex'>
             <Link to='/projects'>
-                <h1 className='text-sm text-thirdColor md:text-lg hover:underline'>
+                <h1 className='text-lg text-thirdColor hover:underline'>
                     Projects
                 </h1>
             </Link>
-            <span className='pt-[3px] md:pt-[6px]'> <MdOutlineNavigateNext color='white' /> </span>
-            <h2 className='text-sm md:text-lg'>{ProjectName}</h2>
+            <span className='pt-[6px] md:pt-[7px]'> <MdOutlineNavigateNext color='white' /> </span>
+            <h2 className='text-lg'>{ProjectName}</h2>
             <div className='pl-3'>
-                <p className='bg-[#A9A9A9] px-1 rounded-sm text-xs md:text-sm'>
+                <p className='bg-[#A9A9A9] px-1 rounded-sm text-xs'>
                     {ProjectDates}
                 </p>
             </div>

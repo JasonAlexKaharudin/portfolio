@@ -1,27 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
-const Navbar = () => {  
+const Navbar = () => {
   const [hidden, setHidden] = useState(true);
   let location = useLocation();
 
-  const handleNavClick = () => {        
-    const menu = document.getElementById('MobileMenu');    
+  const toggle = () => {
+    const menu = document.getElementById('MobileMenu');
 
-    if (hidden === true){
-      menu.classList.remove('hidden');      
+    if (hidden === true) {
+      menu.classList.remove('hidden');
     } else {
-      menu.classList.add('hidden');      
+      menu.classList.add('hidden');
     }
-    
+
     setHidden(!hidden);
   }  
-
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location])
 
   return (
     <>
@@ -31,9 +27,9 @@ const Navbar = () => {
             <span className="self-center text-4xl font-semibold whitespace-nowrap font-monospace">Wacko</span>
           </a>
 
-          <button 
+          <button
             className="p-2 mr-3 border-2 border-[#A4A4A4] rounded-md md:hidden"
-            onClick={handleNavClick}
+            onClick={toggle}
           >
             <AiOutlineMenu size={27} color={'A4A4A4'} />
           </button>
@@ -43,14 +39,13 @@ const Navbar = () => {
               <div className='flex flex-col bg-[#202023] items-start pr-3 mt-3 border-2 rounded-md border-[#A4A4A4] md:border-0 md:flex-row md:pt-0'>
 
                 {
-                  location.pathname === "/" ? 
-                  <a href='#work' className="px-3 py-3 font-medium">Work</a>
-                  :
-                  <Link to='/' className="px-3 py-3 font-medium">Work</Link>
+                  location.pathname === "/" ?
+                    <a href='#work' className="px-3 py-3 font-medium" onClick={toggle}>Work</a>
+                    :
+                    <Link to='/' className="px-3 py-3 font-medium" onClick={toggle}>Work</Link>
 
                 }
-                
-                <Link to="/projects" className="px-3 py-3 font-medium">Projects</Link>
+                <Link id='projectsLink' to="/projects" className="px-3 py-3 font-medium" onClick={toggle}>Projects</Link>
 
                 <div className='pb-4 pl-3 md:pb-0 text-fourthColor font-VT323'>
                   <button className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'>
