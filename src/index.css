@@ -9,3 +9,7 @@ body{
     height: full;    
     background-color: #202023;
 }
+
+html {
+    scroll-behavior: smooth;
+}

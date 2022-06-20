@@ -13,10 +13,10 @@ const ProjectItemInfo = ({ id, stack, github, site, miro, figma }) => {
                 <p className='px-2 bg-[#245526] rounded-sm text-[#68EA6D] font-medium'>CODE</p>
 
                 <div className='flex text-thirdColor'>
-                    <a href={github} className='pl-5 '>
+                    <a href={github} className='flex pl-5 hover:underline'>
                         Github
+                        <span className='pt-1 pl-2'> <GoLinkExternal /> </span>
                     </a>
-                    <span className='pt-1 pl-2'> <GoLinkExternal /> </span>
                 </div>
             </div>
 
