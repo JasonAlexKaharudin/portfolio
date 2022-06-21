@@ -45,12 +45,12 @@ const Navbar = () => {
                     <Link to='/' className="px-3 py-3 font-medium" onClick={toggle}>Work</Link>
 
                 }
-                <Link id='projectsLink' to="/projects" className="px-3 py-3 font-medium" onClick={toggle}>Projects</Link>
+                <Link id='projectsLink' to="/projects" className="px-3 py-3 font-medium" onClick={toggle}>Projects</Link>                 
 
-                <div className='pb-4 pl-3 md:pb-0 text-fourthColor font-VT323'>
-                  <button className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'>
+                <div className='pb-4 pl-3 md:pt-2 md:pb-0 text-fourthColor font-VT323'>
+                  <a href='https://drive.google.com/file/d/1-iO2mvqGmQmn_PhhBwLMBgTmqBl37vRj/view?usp=sharing' className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'>
                     Resume
-                  </button>
+                  </a>                  
                 </div>
               </div>
             </div>

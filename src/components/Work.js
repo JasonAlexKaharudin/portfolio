@@ -3,8 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import WorkCard from './WorkCard';
 
 const WorkInfo = [
-    { company: 'MoneyMoves', role: 'Co-founder & CTO', dates: 'February 2021 - February 2022', res: ['Work with customer-facing API', 'Something to do with Widgets', 'Managed some dudes', 'These stuff on the web app with postgreSQL'] },
-    { company: 'Amili', role: 'UX Designer & PM Intern', dates: 'May 2021 - August 2021', res: ['Help improve Customer Dashboard', 'Debug Customer', 'Helped with V2 of customer dashboard', 'These stuff on the web app with postgreSQL'] }
+    { company: 'MoneyMoves', role: 'Co-founder & CTO', dates: 'February 2021 - February 2022', res: ['Designed the architecture and implemented the MVP web app using Django and PostgreSQL', 'Designed, implemented and maintained customer-facing APIs.', 'Implemented a JavaScript widget on a partner merchant’s site that increased impressions'] },
+    { company: 'Amili', role: 'UX Designer & PM Intern', dates: 'May 2021 - August 2021', res: ['Managed tasks for the dev team ensure tasks meet their deadline while maintaining app functions.', 'Helped in the design of user journeys to accommodate different user goals for v2 of the customer dashboard'] }
 ]
 
 const [mm, amili] = WorkInfo;
