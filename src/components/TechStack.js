@@ -13,9 +13,9 @@ const TechStack = () => {
                 </div>
 
                 <div className='pr-5'>
-                    <p>Node.js</p>
+                    <p>Ruby on Rails</p>
                     <p>Tailwindcss</p>
-                    <p>TypeScript</p>
+                    <p>Retool</p>
                 </div>
             </div>
         </div>

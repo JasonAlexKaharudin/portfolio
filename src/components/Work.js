@@ -3,12 +3,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import WorkCard from './WorkCard';
 
 const WorkInfo = [
-    { company: 'MoneyMoves', role: 'Co-founder & CTO', dates: 'February 2021 - February 2022', res: ['Designed the architecture and implemented the MVP web app using Django and PostgreSQL', 'Designed, implemented and maintained customer-facing APIs.', 'Implemented a JavaScript widget on a partner merchant’s site that increased impressions'] },
+    { company: 'StraitsX', role: 'Software Engineer', dates: 'August 2022 - Present', res: ['Part of the API and Tooling Team', 'Developed pages on Retool using JavaScript which improved the efficiency of internal teams, reducing the engineering team support calls.', 'Designed and developed RESTful APIs for product features, internal teams using Ruby on Rails', "Owned end-to-end feature development lifecycle from designing, implementation, creating test scenarios, conducting bug fixes and enhancements."] },
+    { company: 'MoneyMoves', role: 'Co-founder & CTO', dates: 'February 2021 - February 2022', res: ['Designed the architecture and implemented the MVP web app using Django and PostgreSQL', 'Designed, implemented and maintained customer-facing APIs.', "Implemented a JavaScript widget on a partner merchant’s site that increased impressions"] },
     { company: 'Amili', role: 'UX Designer & PM Intern', dates: 'May 2021 - August 2021', res: ['Managed tasks for the dev team ensure tasks meet their deadline while maintaining app functions.', 'Helped in the design of user journeys to accommodate different user goals for v2 of the customer dashboard'] }
 ]
 
-const [mm, amili] = WorkInfo;
-const initTabs = [mm, amili];
+const [stx, mm, amili] = WorkInfo;
+const initTabs = [stx, mm, amili];
 
 const Work = () => {
     const [selectedTab, setSelectedTab] = useState(initTabs[0]);
