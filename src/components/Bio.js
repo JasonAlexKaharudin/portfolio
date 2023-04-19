@@ -10,18 +10,15 @@ const Bio = () => {
 
             <div className='pt-5 text-md max-w-7xl'>
                 <p>
-                    My name is Jason and I enjoy building things on the web.
-                    Based in Singapore, I am currently working at 
-                    <span className='text-thirdColor'> StraitsX </span> 
-                    enjoying every moment as a 
-                    <span className='text-thirdColor'> Software Engineer</span>.                    
+                    My name is Jason and I am a software engineer with a passion for solving complex problems,
+                    particularly those that involve building scalable, maintainable software systems. As someone 
+                    who is always looking to improve and grow, my ultimate goal is to become a software architect,
+                    a position that will allow me to shape the design and direction of large-scale systems.      
                 </p>
                 <br></br>
                 <p>
-                    I am proud to have completed earned my Bachelors in Computer Science at the University of California, San Diego.
-                    So far, I've had the pleasure of being <span className='text-thirdColor'>UX designer</span> and <span className='text-thirdColor'>project manager intern </span>
-                    and had the privilege to run my own start-up <span className='text-thirdColor'>Money Moves </span>
-                    which was part of <a className='underline hover:text-fourthColor' href='https://nus.edu.sg/grip/news/nus-grip-run-6-lift-off-day/'> NUS Graduate Research Innovation Program run 6.</a>
+                    I am constantly seeking new opportunities to challenge myself and grow as a software engineer. Whether it is through online courses, personal projects, or industry events,
+                    I am always looking for ways to improve my skills and knowledge.
                 </p>
             </div>
 

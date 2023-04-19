@@ -48,7 +48,7 @@ const Navbar = () => {
                 <Link id='projectsLink' to="/projects" className="px-3 py-3 font-medium" onClick={toggle}>Projects</Link>                 
 
                 <div className='pb-4 pl-3 md:pt-2 md:pb-0 text-fourthColor font-VT323'>
-                  <a href='https://drive.google.com/file/d/1DkebZfusxGIHbgaJ_xGn7rpp_SOZX-U-/view?usp=sharing' className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'>
+                  <a href='https://drive.google.com/file/d/1Wj8-eR_dX9qFFKu7y4LKGJjNHFVnvK-c/view?usp=share_link' className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'>
                     Resume
                   </a>                  
                 </div>
