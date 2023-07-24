@@ -1,11 +1,13 @@
-import React from 'react';
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import AnalyticsContext from '../AnalyticsContext';
 
 const ProjectListCard = ({ project }) => {    
+    const { handleTrackClick } = useContext(AnalyticsContext);
 
     return (
         <div className='w-full py-8 md:w-5/12'>
-            <Link to={`/projects/${project.alt}`}>
+            <Link id={`${project.alt}-project-card-button`} to={`/projects/${project.alt}`} onClick={(e) => handleTrackClick(e)}>
                 <img src={project.picture} alt={project.alt} />
                 <div className='flex justify-center pt-3'>
                     <h1 className='text-xl font-medium'> {project.name} </h1>
