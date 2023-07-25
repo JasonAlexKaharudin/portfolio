@@ -3,7 +3,13 @@ import Bio from '../components/Bio';
 import Work from '../components/Work';
 import ProjectBtn from '../components/ProjectBtn';
 import { motion } from 'framer-motion';
+import usePageTracking from '../usePageTracking';
+import useBrowserInfo from '../useBrowserInfo';
+
 const HomePage = () => {
+    const pathURL = window.location.pathname;
+    usePageTracking(pathURL);
+    useBrowserInfo();
 
     return (
         <motion.div

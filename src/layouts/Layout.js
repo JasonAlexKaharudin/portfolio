@@ -2,36 +2,40 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import FooterCard from '../components/FooterCard';
 import AnalyticsContext from '../AnalyticsContext';
-import sendClickInformation from '../analytics';
+import { sendClickInformation, sendPageTimeInformation } from '../analytics';
 
 const Layout = ({ children }) => {
     const initialState = () => {
-        const storedState = sessionStorage.getItem('clicks');
+        const storedState  = sessionStorage.getItem('Clicks')
+
         return storedState ? JSON.parse(storedState) : [];
     }
-
-    const [clicks, setClicks] = useState(initialState);
-
+    
+    const [clicks, setClicks] = useState(initialState(true));
+    const startTime = Date.now();
+    
     useEffect(() => {
         sessionStorage.setItem('Clicks', JSON.stringify(clicks));
 
         window.onbeforeunload = () => {
-            sendClickInformation(clicks);
+            const endTime = Date.now();
+            const duration = (endTime - startTime) / 1000;
+            sendPageTimeInformation({ pageURL: "(base) /", duration: duration })
 
+            sendClickInformation(clicks);
             setClicks([]);
             sessionStorage.removeItem('Clicks');
-            sessionStorage.removeItem('lastActivityTime');
+            sessionStorage.removeItem('viewDuration');
         }
 
         return () => {
             window.onbeforeunload = null;
         };
-    }, [clicks]);
+    }, [clicks, startTime]);
 
     const handleTrackClick = (e) => {
         const buttonId = e.currentTarget.id;
         setClicks([...clicks, { buttonId: buttonId, timestamp: new Date() }])
-        sessionStorage.setItem('lastActivityTime', Date.now());
     }
 
     return (

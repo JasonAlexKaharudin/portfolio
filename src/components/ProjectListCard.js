@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import AnalyticsContext from '../AnalyticsContext';
 
-const ProjectListCard = ({ project }) => {    
+const ProjectListCard = ({ project }) => {
     const { handleTrackClick } = useContext(AnalyticsContext);
 
     return (
