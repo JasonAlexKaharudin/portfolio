@@ -1,13 +1,13 @@
 import { useContext } from 'react';
 import { GoLinkExternal } from 'react-icons/go';
 import AnalyticsContext from '../AnalyticsContext';
-import usePageTracking from '../usePageTracking';
+import usePageTracking from '../hooks/usePageTracking';
 
 const ProjectItemInfo = ({ id, stack, github, site, miro, figma }) => {
-    const { handleTrackClick } = useContext(AnalyticsContext);
+    const { handleTrackClick, userID } = useContext(AnalyticsContext);
     const pathURL = window.location.pathname;
 
-    usePageTracking(pathURL);
+    usePageTracking(pathURL, userID);
 
     return (
         <div>

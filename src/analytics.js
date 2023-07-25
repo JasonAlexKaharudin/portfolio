@@ -2,40 +2,29 @@ import axios from "axios";
 
 const API_BASE_URL = process.env.REACT_APP_BASE_URL + "/api/analytics";
 
-const sendBrowserInformation = (browserInfo) => {
+const sendBrowserInformation = (browserData, userID) => {
+  browserData.userID = userID;
   axios.post(API_BASE_URL + "/browser-info", {
-    browserInfo: browserInfo,
+    browserInfo: browserData
   })
-    .then((response) => {
-      console.log(`Clicks Payload successfully sent.`, response.data);
-    })
     .catch((error) => {
       console.error('Error tracking button.', error)
     })
 }
 
-const sendClickInformation = (clicksArray) => {
-  if (clicksArray.length === 0) {
-    return;
-  }
+const sendClickInformation = (clickData) => {
   axios.post(API_BASE_URL + "/button-click", {
-    payload: clicksArray
+    payload: clickData
   })
-    .then((response) => {
-      console.log(`Clicks Payload successfully sent.`, response.data);
-    })
     .catch((error) => {
       console.error('Error tracking button.', error)
     })
 }
 
-const sendPageTimeInformation = (pageTimeInfo) => {
+const sendPageTimeInformation = (pageViewData) => { 
   axios.post(API_BASE_URL + '/page-view', {
-    payload: pageTimeInfo
+    payload: pageViewData
   })
-    .then((response) => {
-      console.log(`Page View info send`, response.data);
-    })
     .catch((error) => {
       console.error('Error tracking page view.', error);
     })

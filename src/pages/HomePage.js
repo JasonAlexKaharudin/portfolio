@@ -1,15 +1,19 @@
+import { useContext } from 'react';
 import Header from '../components/Header';
 import Bio from '../components/Bio';
 import Work from '../components/Work';
 import ProjectBtn from '../components/ProjectBtn';
 import { motion } from 'framer-motion';
-import usePageTracking from '../usePageTracking';
-import useBrowserInfo from '../useBrowserInfo';
+import AnalyticsContext from '../AnalyticsContext';
+import usePageTracking from '../hooks/usePageTracking';
+import useBrowserInfo from '../hooks/useBrowserInfo';
 
 const HomePage = () => {
     const pathURL = window.location.pathname;
-    usePageTracking(pathURL);
+    const { userID } = useContext(AnalyticsContext);
+    
     useBrowserInfo();
+    usePageTracking(pathURL, userID);
 
     return (
         <motion.div

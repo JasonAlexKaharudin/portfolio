@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { sendBrowserInformation } from './analytics';
+import { sendBrowserInformation } from '../analytics';
 
 const useBrowserInfo = () => {
+  const userID = sessionStorage.getItem('userID');
   const [browserInfo, setBrowserInfo] = useState({
     userAgent: '',
     browserName: '',
@@ -36,17 +37,13 @@ const useBrowserInfo = () => {
       return browserData;
     };
 
-    const sendDataToServer = (data) => {
-      sendBrowserInformation(data)
-    };
-
     const userAgent = navigator.userAgent;
     const { browserName, browserVersion, device } = getBrowserInfo(userAgent);
     const operatingSystem = userAgent.includes('Win') ? 'Windows' : userAgent.includes('Mac') ? 'macOS' : 'Unknown';
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const language = navigator.language;
   
-    setBrowserInfo({
+    setBrowserInfo({ 
       userAgent,
       browserName,
       browserVersion,
@@ -57,7 +54,7 @@ const useBrowserInfo = () => {
     });
 
     if (!dataSent) {
-      sendDataToServer({
+      sendBrowserInformation({
         userAgent,
         browserName,
         browserVersion,
@@ -65,12 +62,12 @@ const useBrowserInfo = () => {
         operatingSystem,
         timezone,
         language,
-      });
+      }, userID);
     }
 
     return () => {
     };
-  }, [dataSent]);
+  }, [dataSent, userID]);
 
   return browserInfo;
 };

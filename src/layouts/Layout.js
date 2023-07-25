@@ -2,36 +2,36 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import FooterCard from '../components/FooterCard';
 import AnalyticsContext from '../AnalyticsContext';
-import { sendClickInformation, sendPageTimeInformation } from '../analytics';
+import { sendClickInformation } from '../analytics';
+import { v4 as uuidv4 } from 'uuid';
+
+const generatedId = uuidv4();
+sessionStorage.setItem('userID', generatedId);
 
 const Layout = ({ children }) => {
+    const userID = generatedId;
     const initialState = () => {
         const storedState  = sessionStorage.getItem('Clicks')
 
         return storedState ? JSON.parse(storedState) : [];
     }
-    
     const [clicks, setClicks] = useState(initialState(true));
-    const startTime = Date.now();
-    
+
     useEffect(() => {
         sessionStorage.setItem('Clicks', JSON.stringify(clicks));
 
         window.onbeforeunload = () => {
-            const endTime = Date.now();
-            const duration = (endTime - startTime) / 1000;
-            sendPageTimeInformation({ pageURL: "(base) /", duration: duration })
-
-            sendClickInformation(clicks);
+            sendClickInformation({ userID: userID, clicks: clicks });
             setClicks([]);
             sessionStorage.removeItem('Clicks');
             sessionStorage.removeItem('viewDuration');
+            sessionStorage.removeItem('userID');
         }
 
         return () => {
             window.onbeforeunload = null;
         };
-    }, [clicks, startTime]);
+    }, [clicks, userID]);
 
     const handleTrackClick = (e) => {
         const buttonId = e.currentTarget.id;
@@ -40,7 +40,7 @@ const Layout = ({ children }) => {
 
     return (
         <>
-            <AnalyticsContext.Provider value={{ handleTrackClick }}>
+            <AnalyticsContext.Provider value={{ handleTrackClick, userID }}>
                 <Navbar/>
                 <main className='flex flex-col max-w-screen-md px-12 pb-24 m-auto md:px-16 bg-mainBG text-primaryTextColor'>
                     {children}
