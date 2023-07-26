@@ -15,7 +15,7 @@ export const ProjectData = [
     },
     {
         id: 'analyticsApp',
-        name: 'Analytics Application',
+        name: 'Analytics App',
         dates: '2023',
         description: ["Developed a dashboard that tracks interactions with my personal website. I used Recharts to help me present actionable data, including button clicks, browser information, and page view duration, empowering myself to make informed decisions and enhance website interaction and engagement.",
             "Implemented data tracking by attaching scripts to my website on react, which sent the information to a server hosted on fly.io. I set up my endpoints using Express.js to allow data submission, and MongoDB to store and manage the collected data."
@@ -34,7 +34,7 @@ export const ProjectData = [
             "The frontend site is deployed on vercel, while the Node application is hosted on fly.io. Both free."
         ],
         stack: ['Typescript', 'React', 'Express', 'MongoDB'],
-        link: 'https://finance-dashboard-jasonalexkaharudin.vercel.app/',
+        site: 'https://finance-dashboard-jasonalexkaharudin.vercel.app/',
         github: 'https://github.com/JasonAlexKaharudin/workoutTracker',
         miro: '',
         figma: '',
@@ -58,7 +58,7 @@ export const ProjectData = [
             "I made this application because I wanted an application (free) that helps me keep track of time, sets and reps during a workout session. I also wanted to see my progress for each workout or exercise that will be represented with some data vizualization."
         ],
         stack: ['React', 'Express', 'TailwindCSS', 'MongoDB'],
-        link: '',
+        site: '',
         github: 'https://github.com/JasonAlexKaharudin/workoutTracker',
         miro: '',
         figma: 'https://www.figma.com/file/Jk7EA17vNandmtNjQa1IH8/Workout-Tracker?node-id=0%3A1',
