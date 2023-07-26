@@ -2,13 +2,16 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import FooterCard from '../components/FooterCard';
 import AnalyticsContext from '../AnalyticsContext';
-import { sendClickInformation } from '../analytics';
+import { sendClickInformation } from '../sendToServer';
+import useBrowserInfo from '../hooks/useBrowserInfo';
 import { v4 as uuidv4 } from 'uuid';
 
 const generatedId = uuidv4();
 sessionStorage.setItem('userID', generatedId);
 
 const Layout = ({ children }) => {
+    useBrowserInfo();
+
     const userID = generatedId;
     const initialState = () => {
         const storedState  = sessionStorage.getItem('Clicks')
@@ -24,7 +27,6 @@ const Layout = ({ children }) => {
             sendClickInformation({ userID: userID, clicks: clicks });
             setClicks([]);
             sessionStorage.removeItem('Clicks');
-            sessionStorage.removeItem('viewDuration');
             sessionStorage.removeItem('userID');
         }
 

@@ -16,13 +16,26 @@ export const ProjectData = [
     {
         id: 'analyticsApp',
         name: 'Analytics Application',
-        dates: '2020',
-        description: ["Set up a basic web server using Apache to create an analytics app to answer the question “How many users are experiencing load times of more than 1000ms?”. Created a script that collects load time and effective connection type using JavaScript objects: Window, Navigation and Timing.",
-            "Used AJAX calls to my server with data collected when the user leaves the page for real-time data. Made use of ExpressJS to set up API endpoints quickly where I processed the data into MongoDB. Non-relational to fit nature of data which is unique and specific."
+        dates: '2023',
+        description: ["Developed a dashboard that tracks interactions with my personal website. I used Recharts to help me present actionable data, including button clicks, browser information, and page view duration, empowering myself to make informed decisions and enhance website interaction and engagement.",
+            "Implemented data tracking by attaching scripts to my website on react, which sent the information to a server hosted on fly.io. I set up my endpoints using Express.js to allow data submission, and MongoDB to store and manage the collected data."
         ],
-        stack: ['JavaScript', 'Express', 'Bootstrap', 'MongoDB'],
+        stack: ['React', 'Express', 'NodeJS', 'MongoDB'],
         site: '',
         github: 'https://github.com/JasonAlexKaharudin/analyticsapp',
+        miro: '',
+        figma: '',
+    },
+    {
+        id: 'financeDashboard',
+        name: 'Finance Dashboard',
+        dates: '2023',
+        description: ["Using Typescript React and Vite to aid my development, I created a finance dashboard with Recharts with mock data in mongoDB. Mock data was obtained from my mongoDB through APIs that I set up with Express.",
+            "The frontend site is deployed on vercel, while the Node application is hosted on fly.io. Both free."
+        ],
+        stack: ['Typescript', 'React', 'Express', 'MongoDB'],
+        link: 'https://finance-dashboard-jasonalexkaharudin.vercel.app/',
+        github: 'https://github.com/JasonAlexKaharudin/workoutTracker',
         miro: '',
         figma: '',
     },
@@ -30,8 +43,8 @@ export const ProjectData = [
         id: 'sportsteammatesforu',
         name: 'Sports Teammates For U',
         dates: '2019',
-        description: ["        As a software architect for this school project, I decided which technologies to use based on the skillset of our team, what we wanted to learn and the deadline. We decided on React due to its wide use in the industry and Django for the backend because due to its development speed."],
-        stack: ['JavaScript', 'Express', 'Bootstrap', 'MongoDB'],
+        description: ["As a 'software architect' for this school project, I decided which technologies to use based on the skillset of our team, what we wanted to learn and the deadline. We decided on React due to its wide use in the industry and Django for the backend because due to its development speed."],
+        stack: ['React', 'Django', 'PostgreSQL'],
         site: 'https://stfu-90f02.firebaseapp.com/',
         github: 'https://github.com/JasonAlexKaharudin/S.T.F.U',
         miro: '',
@@ -41,10 +54,10 @@ export const ProjectData = [
         id: 'workoutTracker',
         name: 'Workout Tracker',
         dates: '2022',
-        description: ["I made this application because I wanted an application (free) that helps me keep track of time, sets and reps during a workout session. I also wanted to see my progress for each workout or exercise that will be represented with some data vizualization.",
-            "I am still currently working on optimizing the application in terms of my React code. I also hope to add more features that will make this app more lively and enjoyable to use. You can check out my prototypes on the figma link below!"
+        description: [
+            "I made this application because I wanted an application (free) that helps me keep track of time, sets and reps during a workout session. I also wanted to see my progress for each workout or exercise that will be represented with some data vizualization."
         ],
-        stack: ['JavaScript', 'Express', 'Bootstrap', 'MongoDB'],
+        stack: ['React', 'Express', 'TailwindCSS', 'MongoDB'],
         link: '',
         github: 'https://github.com/JasonAlexKaharudin/workoutTracker',
         miro: '',

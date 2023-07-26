@@ -6,13 +6,11 @@ import ProjectBtn from '../components/ProjectBtn';
 import { motion } from 'framer-motion';
 import AnalyticsContext from '../AnalyticsContext';
 import usePageTracking from '../hooks/usePageTracking';
-import useBrowserInfo from '../hooks/useBrowserInfo';
 
 const HomePage = () => {
     const pathURL = window.location.pathname;
     const { userID } = useContext(AnalyticsContext);
     
-    useBrowserInfo();
     usePageTracking(pathURL, userID);
 
     return (

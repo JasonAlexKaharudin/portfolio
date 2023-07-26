@@ -2,6 +2,24 @@ import AApic from '../../assets/AApic.png'
 import MMpic from '../../assets/MMpic.png';
 import stfuPic from '../../assets/stfuPic.png';
 import WIP from '../../assets/WIP.png';
+import fbPic from '../../assets/fbPic.png';
+
+
+const fd = {
+    name: 'Finance Dashboard',
+    picture: fbPic,
+    alt: 'financeDashboard',
+    stack: ['Typescript', 'React', 'Express', 'MongoDB'],
+    header: 'Finance dashboard allows users to see their business metrics in a pretty way.'
+}
+
+const aa = {
+    name: 'Analytics Application',
+    picture: AApic,
+    alt: 'analyticsApp',
+    stack: ['React', 'Express', 'NodeJS', 'MongoDB'],
+    header: 'Developed an analytics dashboard that tracks interactions with my personal website. '
+}
 
 const mm = {
     name: 'Money Moves',
@@ -9,14 +27,6 @@ const mm = {
     alt: 'moneymoves',
     stack: [ 'Django', 'PostgreSQL', 'React', 'Tailwindcss' ],
     header: 'Platform that allows users to invest cashback when they shop with our merchants'
-}
-
-const aa = {
-    name: 'Analytics Application',
-    picture: AApic,
-    alt: 'analyticsApp',
-    stack: [ 'JavaScript', 'Express', 'Bootstrap', 'MongoDB' ],
-    header: 'App that helps track visitors to answer the question “How many users are experiencing load times more than 1000ms?”'
 }
 
 const stfu = {
@@ -40,8 +50,9 @@ const workout = {
 }
 
 export const projectList = [
-    mm, 
+    fd,
     aa,
+    mm,
     stfu,
     workout
 ]

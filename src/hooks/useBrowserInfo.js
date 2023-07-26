@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { sendBrowserInformation } from '../analytics';
+import { sendBrowserInformation } from '../sendToServer';
 
 const useBrowserInfo = () => {
   const userID = sessionStorage.getItem('userID');
