@@ -9,10 +9,10 @@ const usePageTracking = (path, userID) => {
         return () => {
             const endTime = Date.now();
             const pageViewDuration = (endTime - startTime) / 1000;
-            if (pageViewDuration < 1.000 || pageViewDuration > 30){
+            if (pageViewDuration < 0.5 || pageViewDuration > 120){
                 return;
             }
-            sendPageTimeInformation({ userID: userID, pathURL: pathURL, duration: pageViewDuration });
+            sendPageTimeInformation({ userID: userID, pathURL: pathURL, duration: pageViewDuration, timestamp: Date.now() });
         }
     });
 

@@ -11,6 +11,7 @@ const useBrowserInfo = () => {
     operatingSystem: '',
     timezone: '',
     language: '',
+    timestamp: '',
   });
 
   const dataSent = false;
@@ -42,6 +43,7 @@ const useBrowserInfo = () => {
     const operatingSystem = userAgent.includes('Win') ? 'Windows' : userAgent.includes('Mac') ? 'macOS' : 'Unknown';
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const language = navigator.language;
+    const timestamp = Date.now();
   
     setBrowserInfo({ 
       userAgent,
@@ -51,6 +53,7 @@ const useBrowserInfo = () => {
       operatingSystem,
       timezone,
       language,
+      timestamp
     });
 
     if (!dataSent) {
@@ -62,6 +65,7 @@ const useBrowserInfo = () => {
         operatingSystem,
         timezone,
         language,
+        timestamp
       }, userID);
     }
 

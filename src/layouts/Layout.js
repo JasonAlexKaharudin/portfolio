@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
 
     const handleTrackClick = (e) => {
         const buttonId = e.currentTarget.id;
-        setClicks([...clicks, { buttonId: buttonId, timestamp: new Date() }])
+        setClicks([...clicks, { buttonId: buttonId, timestamp: Date.now() }])
     }
 
     return (
