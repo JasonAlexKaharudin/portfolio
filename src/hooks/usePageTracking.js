@@ -12,7 +12,7 @@ const usePageTracking = (path, userID) => {
             if (pageViewDuration < 0.5 || pageViewDuration > 120){
                 return;
             }
-            sendPageTimeInformation({ userID: userID, pathURL: pathURL, duration: pageViewDuration, timestamp: Date.now() });
+            sendPageTimeInformation({ userID: userID, pathURL: pathURL, duration: pageViewDuration, timestamp: new Date() });
         }
     });
 
