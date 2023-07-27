@@ -37,7 +37,8 @@ const Layout = ({ children }) => {
 
     const handleTrackClick = (e) => {
         const buttonId = e.currentTarget.id;
-        setClicks([...clicks, { buttonId: buttonId, timestamp: new Date() }])
+        const pageURL = window.location.pathname;
+        setClicks([...clicks, { buttonId: buttonId, pageURL: pageURL, timestamp: new Date() }])
     }
 
     return (
