@@ -11,7 +11,7 @@ const ProjectBtn = () => {
             <Link to='/projects'>
                 <button
                     className='px-2 pl-3 py-2 text-[#000000] font-medium rounded-md bg-fourthColor hover:bg-[#957502]'
-                    id='main-projects-button'
+                    id='home-projects-button'
                     onClick={(e) => handleTrackClick(e)}
                 >
 

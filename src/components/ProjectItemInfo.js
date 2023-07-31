@@ -20,7 +20,7 @@ const ProjectItemInfo = ({ id, stack, github, site, miro, figma }) => {
                 <p className='px-2 bg-[#245526] rounded-sm text-[#68EA6D] font-medium'>CODE</p>
 
                 <div className='flex text-thirdColor'>
-                    <a id={`${id}-github-button`} href={github} className='flex pl-5 hover:underline' onClick={(e) => handleTrackClick(e)}>
+                    <a id={`${id}-github`} href={github} className='flex pl-5 hover:underline' onClick={(e) => handleTrackClick(e)}>
                         Github
                         <span className='pt-1 pl-2'> <GoLinkExternal /> </span>
                     </a>
@@ -33,7 +33,7 @@ const ProjectItemInfo = ({ id, stack, github, site, miro, figma }) => {
                     <p className='px-2 bg-[#245526] rounded-sm text-[#68EA6D] font-medium'>SITE</p>
 
                     <div className='flex text-thirdColor'>
-                        <a id={`${id}-site-button`}  href={site} className='pl-5' onClick={(e) => handleTrackClick(e)}>
+                        <a id={`${id}-site`}  href={site} className='pl-5' onClick={(e) => handleTrackClick(e)}>
                             {id}
                         </a>
                         <span className='pt-1 pl-2'> <GoLinkExternal /> </span>
@@ -47,7 +47,7 @@ const ProjectItemInfo = ({ id, stack, github, site, miro, figma }) => {
                     <p className='px-2 bg-[#245526] rounded-sm text-[#68EA6D] font-medium'>MIRO</p>
 
                     <div className='flex text-thirdColor'>
-                        <a id={`${id}-miro-button`} href={miro} className='pl-5' onClick={(e) => handleTrackClick(e)}>
+                        <a id={`${id}-miro`} href={miro} className='pl-5' onClick={(e) => handleTrackClick(e)}>
                             User Flows
                         </a>
                         <span className='pt-1 pl-2'> <GoLinkExternal /> </span>
@@ -61,7 +61,7 @@ const ProjectItemInfo = ({ id, stack, github, site, miro, figma }) => {
                     <p className='px-2 bg-[#245526] rounded-sm text-[#68EA6D] font-medium'>FIGMA</p>
 
                     <div className='flex text-thirdColor'>
-                        <a id={`${id}-figma-button`} href={figma} className='pl-5' onClick={(e) => handleTrackClick(e)}>
+                        <a id={`${id}-figma`} href={figma} className='pl-5' onClick={(e) => handleTrackClick(e)}>
                             Prototypes
                         </a>
                         <span className='pt-1 pl-2'> <GoLinkExternal /> </span>

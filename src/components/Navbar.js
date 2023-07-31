@@ -26,7 +26,7 @@ const Navbar = () => {
     <>
       <nav className="py-6 pl-6 rounded sm:px-4 dark:bg-gray-800 text-primaryTextColor">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
-          <a id='wacko-nav-button' href="/" className='pb-0 md:pb-10' onClick={(e) => toggle(e)}>
+          <a id='nav-wacko' href="/" className='pb-0 md:pb-10' onClick={(e) => toggle(e)}>
             <span className="self-center text-4xl font-semibold whitespace-nowrap font-monospace">Wacko</span>
           </a>
 
@@ -44,16 +44,16 @@ const Navbar = () => {
                   location.pathname === "/" ?
                     <a id='/-nav-button' href='#work' className="px-3 py-3 font-medium" onClick={(e) => toggle(e)}>Work</a>
                     :
-                    <Link id='work-nav-button' to='/' className="px-3 py-3 font-medium" onClick={(e) => toggle(e)}>Work</Link>
+                    <Link id='nav-work' to='/' className="px-3 py-3 font-medium" onClick={(e) => toggle(e)}>Work</Link>
 
                 }
-                <Link id='projects-nav-button' to="/projects" className="px-3 py-3 font-medium"  onClick={(e) => toggle(e)}>Projects</Link>                 
+                <Link id='nav-projects-button' to="/projects" className="px-3 py-3 font-medium"  onClick={(e) => toggle(e)}>Projects</Link>                 
 
                 <div className='pb-4 pl-3 md:pt-2 md:pb-0 text-fourthColor font-VT323'>
                   <a 
                     href='https://drive.google.com/file/d/1Wj8-eR_dX9qFFKu7y4LKGJjNHFVnvK-c/view?usp=share_link' 
                     className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'
-                    id='resume-button'
+                    id='nav-resume'
                     onClick={(e) => handleTrackClick(e)}
                   >
                     Resume
