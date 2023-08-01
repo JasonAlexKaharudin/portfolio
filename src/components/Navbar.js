@@ -51,7 +51,7 @@ const Navbar = () => {
 
                 <div className='pb-4 pl-3 md:pt-2 md:pb-0 text-fourthColor font-VT323'>
                   <a 
-                    href='https://drive.google.com/file/d/1Wj8-eR_dX9qFFKu7y4LKGJjNHFVnvK-c/view?usp=share_link' 
+                    href='https://drive.google.com/file/d/1SmnNAFPpq0H-FnBvIuzNPHs_AJQ1M3oa/view?usp=sharing' 
                     className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'
                     id='nav-resume'
                     onClick={(e) => handleTrackClick(e)}
