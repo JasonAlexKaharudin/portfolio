@@ -21,7 +21,7 @@ export const ProjectData = [
             "Implemented data tracking by attaching scripts to my website on react, which sent the information to a server hosted on fly.io. I set up my endpoints using Express.js to allow data submission, and MongoDB to store and manage the collected data."
         ],
         stack: ['React', 'Express', 'NodeJS', 'MongoDB'],
-        site: '',
+        site: 'https://analytics-app-gilt.vercel.app/',
         github: 'https://github.com/JasonAlexKaharudin/analyticsapp',
         miro: '',
         figma: '',
