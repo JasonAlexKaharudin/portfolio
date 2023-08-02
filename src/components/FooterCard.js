@@ -23,6 +23,11 @@ const FooterCard = () => {
             <span>
                 <a id='footer-email' href='mailto:jasonakaharudin@gmail.com' className='text-sm md:text-lg font-monospace text-[#8E8E8E]' onClick={(e) => handleTrackClick(e)}>jasonakaharudin@gmail.com</a>
             </span>
+            <span>
+                <a id='footer-analytics' href='https://analytics-app-gilt.vercel.app/' className='text-sm md:text-md font-monospace text-[#8E8E8E]' onClick={(e) => handleTrackClick(e)}>
+                    Click me for analytics!
+                </a>
+            </span>
         </footer>
     )
 }
