@@ -1,9 +1,8 @@
 import { useContext } from 'react';
-import Header from '../components/Header';
-import Bio from '../components/Bio';
 import Work from '../components/Work';
-import ProjectBtn from '../components/ProjectBtn';
 import { motion } from 'framer-motion';
+import ProjectList from '../components/ProjectList';
+import Header from '../components/Header';
 import AnalyticsContext from '../AnalyticsContext';
 import usePageTracking from '../hooks/usePageTracking';
 
@@ -20,10 +19,11 @@ const HomePage = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
         >
-            <Header />
-            <Bio />
-            <ProjectBtn />
-            <Work />
+            <div className='flex flex-col'>
+                <Header/>
+                <Work />
+                <ProjectList/>
+            </div>
         </motion.div>
     )
 }

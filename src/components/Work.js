@@ -14,7 +14,7 @@ const Work = () => {
     }
 
     return (
-        <section className="pt-20 md:pt-24">
+        <section className="pt-12 md:pt-18">
             <div className='flex'>
                 <h1 id='work' className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>Work</h1>
             </div>

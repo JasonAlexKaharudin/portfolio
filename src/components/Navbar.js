@@ -1,13 +1,9 @@
 import { useState, useContext } from 'react';
 import AnalyticsContext from '../AnalyticsContext.js';
-import { AiOutlineMenu } from 'react-icons/ai';
-import { Link } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const { handleTrackClick } = useContext(AnalyticsContext);
   const [hidden, setHidden] = useState(true);
-  let location = useLocation();
 
   const toggle = (e) => {
     const menu = document.getElementById('MobileMenu');
@@ -24,7 +20,25 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="py-6 pl-6 rounded sm:px-4 dark:bg-gray-800 text-primaryTextColor">
+      <nav className='flex justify-between px-5 py-6 md:px-10 md:py-10'>
+        <div>
+          <a id='nav-wacko' href="/" className='pb-0 md:pb-10' onClick={(e) => toggle(e)}>
+            <span className="self-center text-4xl font-semibold whitespace-nowrap font-monospace text-primaryTextColor">Wacko</span>
+          </a>
+        </div>
+
+        <div className='pb-4 pl-3 md:pt-2 md:pb-0 text-fourthColor font-VT323'>
+          <a 
+            href='https://drive.google.com/file/d/1SmnNAFPpq0H-FnBvIuzNPHs_AJQ1M3oa/view?usp=sharing' 
+            className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'
+            id='nav-resume'
+            onClick={(e) => handleTrackClick(e)}
+          >
+            Resume
+          </a>                  
+        </div>
+      </nav>
+      {/* <nav className="py-6 pl-6 rounded sm:px-4 dark:bg-gray-800 text-primaryTextColor">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a id='nav-wacko' href="/" className='pb-0 md:pb-10' onClick={(e) => toggle(e)}>
             <span className="self-center text-4xl font-semibold whitespace-nowrap font-monospace">Wacko</span>
@@ -62,9 +76,8 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-
         </div>
-      </nav>
+      </nav> */}
     </>
   )
 }

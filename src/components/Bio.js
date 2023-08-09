@@ -1,28 +1,31 @@
 import React from 'react'
-import TechStack from './TechStack';
 
 const Bio = () => {
     return (
-        <section className='pt-20 md:pt-24'>
+        <section className='pt-10'>
             <div className='flex'>
-                <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>Bio</h1>
+                <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>What I've Been Using</h1>
             </div>
 
-            <div className='pt-5 text-md max-w-7xl'>
-                <p>
-                    My name is Jason and I am a software engineer with a passion for solving complex problems,
-                    particularly those that involve building scalable, maintainable software systems. As someone 
-                    who is always looking to improve and grow, my ultimate goal is to become a software architect,
-                    a position that will allow me to shape the design and direction of large-scale systems.      
-                </p>
-                <br></br>
-                <p>
-                    I am constantly seeking new opportunities to challenge myself and grow as a software engineer. Whether it is through online courses, personal projects, or industry events,
-                    I am always looking for ways to improve my skills and knowledge.
-                </p>
+            <div className='pt-3 text-md max-w-7xl'>
+                <div className='flex pt-3 text-sm font-monospace '>
+                    <div className='pr-5'>
+                        <p>JavaScript</p>
+                        <p>React</p>
+                        <p>Django</p>
+                    </div>
+
+                    <div className='pr-5'>
+                        <p>Ruby on Rails</p>
+                        <p>Python</p>
+                        <p>TypeScript</p>
+                    </div>
+                </div>
             </div>
 
-            <TechStack />
+            <div className='pt-7'>
+
+            </div>
         </section>
     )
 }

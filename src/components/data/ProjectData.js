@@ -50,17 +50,4 @@ export const ProjectData = [
         miro: '',
         figma: '',
     },
-    {
-        id: 'workoutTracker',
-        name: 'Workout Tracker',
-        dates: '2022',
-        description: [
-            "I made this application because I wanted an application (free) that helps me keep track of time, sets and reps during a workout session. I also wanted to see my progress for each workout or exercise that will be represented with some data vizualization."
-        ],
-        stack: ['React', 'Express', 'TailwindCSS', 'MongoDB'],
-        site: '',
-        github: 'https://github.com/JasonAlexKaharudin/workoutTracker',
-        miro: '',
-        figma: 'https://www.figma.com/file/Jk7EA17vNandmtNjQa1IH8/Workout-Tracker?node-id=0%3A1',
-    },
 ]

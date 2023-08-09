@@ -7,7 +7,7 @@ const ProjectPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}   
-            transition={{ duration: 0.5 }}         
+            transition={{ duration: 0.5 }}
         >
             <div className='pt-20 md:pt-14'>
                 <h1 className='text-3xl text-center pb-7 md:pb-14 font-monospace text-secondaryTextColor'>Projects</h1>

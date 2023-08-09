@@ -1,7 +1,6 @@
 import AApic from '../../assets/AApic.png'
 import MMpic from '../../assets/MMpic.png';
 import stfuPic from '../../assets/stfuPic.png';
-import WIP from '../../assets/WIP.png';
 import fbPic from '../../assets/fbPic.png';
 
 
@@ -39,20 +38,9 @@ const stfu = {
     header: 'Platform for users to find teammates, opponents and referees for casual sports.'
 }
 
-const workout = {
-    name: 'Workout Tracker',
-    picture: WIP,
-    alt: 'workoutTracker',
-    link: '',
-    github: 'https://github.com/JasonAlexKaharudin/workoutTracker',
-    stack: [ 'React', 'Firebase', 'MongoDB', 'JavaScript'],
-    header: 'Application that aids in tracking workouts and to show progress through data vizualization. Work in progress!'
-}
-
 export const projectList = [
     fd,
     aa,
     mm,
     stfu,
-    workout
 ]

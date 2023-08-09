@@ -5,9 +5,9 @@ import { MdOutlineNavigateNext } from 'react-icons/md';
 const ProjectItemHeader = ({ ProjectName, ProjectDates }) => {
     return (
         <div className='flex'>
-            <Link to='/projects'>
+            <Link to='/'>
                 <h1 className='text-lg text-thirdColor hover:underline'>
-                    Projects
+                    Home
                 </h1>
             </Link>
             <span className='pt-[6px] md:pt-[7px]'> <MdOutlineNavigateNext color='white' /> </span>
