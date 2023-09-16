@@ -9,11 +9,14 @@ const sendBrowserInformation = (browserData, userID) => {
   }
   axios.post(API_BASE_URL + "/browser-info", browserData)
     .catch((error) => {
-      console.error('Error tracking button.', error)
+      console.error('Error tracking browser information.', error)
     })
 }
 
 const sendClickInformation = (clickData) => {
+  if (clickData.clicks.length === 0) {
+    return
+  }
   axios.post(API_BASE_URL + "/button-click", clickData)
     .catch((error) => {
       console.error('Error tracking button.', error)
