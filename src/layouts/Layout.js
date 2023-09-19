@@ -3,15 +3,12 @@ import Navbar from '../components/Navbar';
 import FooterCard from '../components/FooterCard';
 import AnalyticsContext from '../AnalyticsContext';
 import { sendClickInformation } from '../sendToServer';
-import useBrowserInfo from '../hooks/useBrowserInfo';
 import { v4 as uuidv4 } from 'uuid';
 
 const generatedId = uuidv4();
 sessionStorage.setItem('userID', generatedId);
 
 const Layout = ({ children }) => {
-    useBrowserInfo();
-
     const userID = generatedId;
     const initialState = () => {
         const storedState  = sessionStorage.getItem('Clicks')

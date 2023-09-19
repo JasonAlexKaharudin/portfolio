@@ -1,28 +1,14 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import AnalyticsContext from '../AnalyticsContext.js';
 
 const Navbar = () => {
   const { handleTrackClick } = useContext(AnalyticsContext);
-  const [hidden, setHidden] = useState(true);
-
-  const toggle = (e) => {
-    const menu = document.getElementById('MobileMenu');
-
-    if (hidden === true) {
-      menu.classList.remove('hidden');
-    } else {
-      menu.classList.add('hidden');
-    }
-
-    setHidden(!hidden);
-    handleTrackClick(e)
-  }
 
   return (
     <>
       <nav className='flex justify-between px-5 py-6 md:px-10 md:py-10'>
         <div>
-          <a id='nav-wacko' href="/" className='pb-0 md:pb-10' onClick={(e) => toggle(e)}>
+          <a id='nav-wacko' href="/" className='pb-0 md:pb-10'>
             <span className="self-center text-4xl font-semibold whitespace-nowrap font-monospace text-primaryTextColor">Wacko</span>
           </a>
         </div>

@@ -4,9 +4,12 @@ import { motion } from 'framer-motion';
 import ProjectList from '../components/ProjectList';
 import Header from '../components/Header';
 import AnalyticsContext from '../AnalyticsContext';
+import useBrowserInfo from '../hooks/useBrowserInfo';
 import usePageTracking from '../hooks/usePageTracking';
 
 const HomePage = () => {
+    useBrowserInfo();
+
     const pathURL = window.location.pathname;
     const { userID } = useContext(AnalyticsContext);
     

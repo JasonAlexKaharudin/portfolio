@@ -7,7 +7,6 @@ import { useParams } from "react-router-dom";
 
 const ProjectItem = () => {
     const params = useParams();
-    console.log(params);
     const currentProject = ProjectData.find(project => project.id === params.id)
 
     return (
