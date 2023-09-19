@@ -2,35 +2,31 @@ import { useState, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import FooterCard from '../components/FooterCard';
 import AnalyticsContext from '../AnalyticsContext';
-import { sendClickInformation } from '../sendToServer';
 import { v4 as uuidv4 } from 'uuid';
+import { sendClickInformation } from '../sendToServer';
+import useBrowserInfo from '../hooks/useBrowserInfo';
 
-const generatedId = uuidv4();
-sessionStorage.setItem('userID', generatedId);
+const userID = uuidv4();
 
 const Layout = ({ children }) => {
-    const userID = generatedId;
-    const initialState = () => {
-        const storedState  = sessionStorage.getItem('Clicks')
+    const [clicks, setClicks] = useState([]);
+    sessionStorage.setItem('userID', userID);
+    sessionStorage.setItem('clicks', JSON.stringify(clicks));
 
-        return storedState ? JSON.parse(storedState) : [];
-    }
-    const [clicks, setClicks] = useState(initialState(true));
+    useBrowserInfo();
 
     useEffect(() => {
-        sessionStorage.setItem('Clicks', JSON.stringify(clicks));
-
         window.onbeforeunload = () => {
             sendClickInformation({ userID: userID, clicks: clicks });
             setClicks([]);
-            sessionStorage.removeItem('Clicks');
-            sessionStorage.removeItem('userID');
+            sessionStorage.removeItem('clicks');
+            sessionStorage.removeItem('userID')
         }
 
         return () => {
             window.onbeforeunload = null;
         };
-    }, [clicks, userID]);
+    }, [clicks]);
 
     const handleTrackClick = (e) => {
         const buttonId = e.currentTarget.id;

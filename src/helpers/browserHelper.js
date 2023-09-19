@@ -19,6 +19,7 @@ export const getBrowserInfo = (userAgent) => {
   browserData.operatingSystem = userAgent.includes('Win') ? 'Windows' : userAgent.includes('Mac') ? 'macOS' : 'Unknown';
   browserData.timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   browserData.language = navigator.language;
+  browserData.userAgent = userAgent;
 
   return browserData;
 };
