@@ -4,12 +4,10 @@ import ProjectListCard from './ProjectListCard';
 
 const ProjectList = () => {
     return (
-        <section className="pt-24 md:pt-18">
-            <div className='flex'>
-                <h1 className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>Projects</h1>
-            </div>
+        <section className="pt-20 md:pt-16">
+            <h1 id='work' className='text-2xl text-[#a1a1a1] md:text-2xl'>Projects</h1>
 
-            <div className='flex flex-wrap justify-around pt-5'>
+            <div className='flex flex-wrap justify-between pt-5'>
                 {
                     projectList.map((project, idx) => {
                         return (
@@ -19,7 +17,6 @@ const ProjectList = () => {
                 }
             </div>
         </section>
-
     )
 }
 

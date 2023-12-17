@@ -10,7 +10,7 @@ const ProjectItem = () => {
     const currentProject = ProjectData.find(project => project.id === params.id)
 
     return (
-        <section className='pt-20 pb-20 md:pb-32'>
+        <section className='pt-3 pb-20 md:pt-10 md:pb-32'>
             <ProjectItemHeader ProjectName={currentProject.name} ProjectDates={currentProject.dates} />
             <ProjectItemDesc description={currentProject.description} />
             <ProjectItemInfo

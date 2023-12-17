@@ -35,15 +35,17 @@ const Layout = ({ children }) => {
     }
 
     return (
-        <>
+        <div className='w-full'>
             <AnalyticsContext.Provider value={{ handleTrackClick, userID }}>
                 <Navbar/>
-                <main className='flex flex-col max-w-screen-md px-12 pb-24 m-auto md:px-16 bg-mainBG text-primaryTextColor'>
+                <main className='flex flex-col m-auto bg-mainBG text-primaryTextColor
+                    px-6 md:px-6 pt-16 pb-24 md:pt-20 md:pb-44 max-w-[700px] mx-auto
+                '>
                     {children}
                 </main>
                 <FooterCard/> 
             </AnalyticsContext.Provider>
-        </>
+        </div>
     )
 }
 

@@ -6,14 +6,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className='flex justify-between px-5 py-6 md:px-10 md:py-10'>
+      <nav className='pt-10 px-7 md:px-6 py-3 lg max-w-[700px] mx-auto flex justify-between items-center gap-3'>
         <div>
           <a id='nav-wacko' href="/" className='pb-0 md:pb-10'>
-            <span className="self-center text-4xl font-semibold whitespace-nowrap font-monospace text-primaryTextColor">Wacko</span>
+            <span className="self-center text-4xl font-semibold whitespace-nowrap text-primaryTextColor font-VT323">Wacko</span>
           </a>
         </div>
 
-        <div className='pb-4 pl-3 md:pt-2 md:pb-0 text-fourthColor font-VT323'>
+        <div className='pt-5 pb-4 pl-3 md:pt-2 md:pb-0 text-fourthColor font-VT323'>
           <a 
             href='https://drive.google.com/file/d/1SmnNAFPpq0H-FnBvIuzNPHs_AJQ1M3oa/view?usp=sharing' 
             className='px-3 py-1 text-2xl border-4 rounded-md border-fourthColor'

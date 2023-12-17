@@ -1,61 +1,44 @@
-import React, { useState } from 'react'
-import { motion, AnimatePresence } from "framer-motion";
-import { WorkSummary } from './data/WorkSummary';
-import WorkCard from './WorkCard';
-
-const [stx, mm, amili] = WorkSummary;
-const initTabs = [stx, mm, amili];
-
 const Work = () => {
-    const [selectedTab, setSelectedTab] = useState(initTabs[0]);
-    
-    const handleWorkBtnClick = (event, item) => {
-        setSelectedTab(item);
-    }
+    return (        
+        <section className='flex flex-col gap-5 pt-12 md:flex-row md:gap-16'>
+            <h1 id='work' className='text-2xl text-[#a1a1a1] md:text-2xl'>Work</h1>
+            <div className='flex flex-col gap-12 pt-1 pr-3 md:pr-5'>
+                <p>
+                    1+ years of professional development experience.
+                    Currently working at Kiteworks as a software engineer
+                    in the application team.
+                </p>
 
-    return (
-        <section className="pt-12 md:pt-18">
-            <div className='flex'>
-                <h1 id='work' className='text-2xl border-b-4 md:text-2xl border-secondaryTextColor font-monospace'>Work</h1>
-            </div>
+                <div className='flex flex-col gap-5'>
+                    <div className='flex justify-between'>
+                        <a href="https://kiteworks.com" className="">
+                            <div className='flex flex-col gap-1 '>
+                                <h2 className='text-lg '>Software Engineer</h2>
+                                <h3 className='text-md text-[#a1a1a1]'>Kiteworks</h3>
+                            </div>
+                        </a>
+                        <p className='text-[#a1a1a1] text-md'>2023-</p>
+                    </div>
 
-            <div className='flex flex-col pt-5 md:flex-row'>
-                <div className='flex items-start font-medium md:justify-start md:flex-col text-secondaryTextColor '>
+                    <div className='flex justify-between'>
+                        <div className='flex flex-col gap-1'>
+                            <h2 className='text-lg'>Software Engineer</h2>
+                            <h3 className='text-md text-[#a1a1a1]'>StraitsX (Fazz)</h3>
+                        </div>
+                        <p className='text-[#a1a1a1] text-md'>2022-2023</p>
+                    </div>
 
-                    {initTabs.map((item) => (
-                        <button
-                            key={item.company}
-                            id={`${item.company}-button`}
-                            className={item === selectedTab ? 'font-medium bg-[#454545] transition-all ease-in-out delay-75 duration-500 rounded-md px-2 py-1 text-secondaryTextColor' : 'font-medium transition-all ease-in-out delay-75 duration-500 rounded-md px-2 py-1 text-secondaryTextColor'}
-                            onClick={(event) => handleWorkBtnClick(event, item)}
-                        >
-
-                            {`${item.company}`}
-                        </button>
-                    ))}
-
-                </div>
-                <div className='md:pl-4'>
-                    <AnimatePresence exitBeforeEnter>
-                        <motion.div
-                            key={selectedTab && selectedTab.company}
-                            initial={{ x: 10, opacity: 0 }}
-                            animate={{ x: 0, opacity: 1 }}
-                            exit={{ x: -10, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                        >
-                            {
-                                selectedTab &&
-                                <WorkCard selectedTab={selectedTab} />
-                            }
-
-
-                        </motion.div>
-                    </AnimatePresence>
+                    <div className='flex justify-between'>
+                        <div className='flex flex-col gap-1'>
+                            <h2 className='text-lg'>Computer Science Bachelor's Degree </h2>
+                            <h3 className='text-md text-[#a1a1a1]'>University of California San Diego</h3>
+                        </div>
+                        <p className='text-[#a1a1a1] text-md'>2021</p>
+                    </div>                    
                 </div>
             </div>
         </section>
     )
 }
 
-export default Work
+export default Work;
